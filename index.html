@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Translator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="translator-container">
+        <div class="language-selector">
+          <select name="" id="" class="from"></select>
+          <div class="arrow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 exchange"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"
+              />
+            </svg>
+          </div>
+          <select name="" id="" class="to"></select>
+        </div>
+        <div class="language-transilation">
+          <div class="language-from">
+            <input type="text" placeholder="Enter text" class="from-text" />
+          </div>
+          <div class="language-to">
+            <input type="text" placeholder="Transilation" class="to-text" />
+          </div>
+        </div>
+        <div class="translate">
+          <button class="btn-translate">TRANSLATE</button>
+        </div>
+      </div>
+    </div>
+    <script src="/JS/countries.js"></script>
+    <script src="/JS/script.js"></script>
+  </body>
+</html>
