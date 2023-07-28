@@ -20,7 +20,6 @@ selectTag.forEach((tag, id) => {
 });
 
 exchange.addEventListener("click", () => {
-  alert("Please select");
   let tempText = fromText.value;
   let tempLang = selectTag[0].value;
   fromText.value = toText.value;
