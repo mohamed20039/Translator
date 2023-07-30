@@ -34,11 +34,20 @@ translate.addEventListener("click", () => {
   const translateFrom = selectTag[0].value;
   const translateTo = selectTag[1].value;
 
-  let apiUrl = `https://api.mymemory.translated.net/get?q=${text}&langpair=${translateFrom}|${translateTo}`;
+  // let apiUrl = ;
 
-  fetch(apiUrl)
-    .then((res) => res.json())
-    .then((data) => {
-      toText.value = data.responseData.translatedText;
-    });
+  const getTranslatedText = async () => {
+    translate.innerText = "Translating...";
+
+    const res = await fetch(
+      `https://api.mymemory.translated.net/get?q=${text}&langpair=${translateFrom}|${translateTo}`
+    );
+
+    let data = await res.json();
+    translate.innerText = "Translate";
+
+    toText.value = data.responseData.translatedText;
+  };
+
+  getTranslatedText();
 });
